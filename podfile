@@ -1,0 +1,8 @@
+project 'ITechArtMaps.xcodeproj'
+target 'ITechArtMaps' do
+  use_frameworks!
+  pod 'Alamofire', '~> 5.2'
+  pod 'RealmSwift'
+  pod 'GoogleMaps', '4.2.0'
+  pod 'GooglePlaces', '4.2.0'
+end
