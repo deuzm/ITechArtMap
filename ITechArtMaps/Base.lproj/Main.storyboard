@@ -16,13 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="khD-5i-r5w">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <connections>
-                                    <segue destination="ZAh-6j-VWm" kind="embed" id="eEF-pe-OA2"/>
-                                </connections>
-                            </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F0g-JF-os9">
                                 <rect key="frame" x="33" y="784" width="272" height="45"/>
                                 <color key="backgroundColor" systemColor="labelColor"/>
@@ -48,16 +41,27 @@
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LMZ-BR-klv"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sGT-aO-rsl" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="h4U-wE-Thg"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="sGT-aO-rsl" secondAttribute="trailing" id="3V4-mY-UNO"/>
+                            <constraint firstAttribute="bottom" secondItem="sGT-aO-rsl" secondAttribute="bottom" id="MrU-1f-EEE"/>
                             <constraint firstItem="F0g-JF-os9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="33" id="Uwo-H2-wQN"/>
+                            <constraint firstItem="sGT-aO-rsl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Yuk-aA-Ruh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="F0g-JF-os9" secondAttribute="bottom" constant="33" id="ZRL-uw-NrC"/>
+                            <constraint firstItem="sGT-aO-rsl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="mjL-Mt-5Ga"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="mapView" destination="sGT-aO-rsl" id="Phv-px-9GI"/>
+                        <outlet property="mapView" destination="sGT-aO-rsl" id="v9s-Hf-Eq1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -70,23 +74,24 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="76.339285714285708"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Table-->
         <scene sceneID="b5w-Nj-Czg">
             <objects>
-                <tableViewController storyboardIdentifier="Table" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Bcj-fy-IlJ" customClass="TableViewController" customModule="ITechArtMaps" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Dck-gs-PCn">
+                <tableViewController storyboardIdentifier="Table" title="Table" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Bcj-fy-IlJ" customClass="TableViewController" customModule="ITechArtMaps" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" sectionIndexMinimumDisplayRowCount="2" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Dck-gs-PCn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="sectionIndexBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="89" id="UaJ-rA-1Ov">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MarkTableViewCell" rowHeight="89" id="UaJ-rA-1Ov" customClass="MarkTableViewCell" customModule="ITechArtMaps" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="89"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UaJ-rA-1Ov" id="NN7-PL-TeR">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="89"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eXk-Ms-Jt0">
+                                        <view contentMode="scaleToFill" restorationIdentifier="MarkTableViewCell" translatesAutoresizingMaskIntoConstraints="NO" id="eXk-Ms-Jt0" customClass="MarkTableViewCell" customModule="ITechArtMaps" customModuleProvider="target">
                                             <rect key="frame" x="26" y="8" width="372" height="73"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6G-7z-OnW">
@@ -109,6 +114,7 @@
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstItem="5C6-IW-cfc" firstAttribute="top" secondItem="eXk-Ms-Jt0" secondAttribute="top" id="5Ma-ht-OMK"/>
+                                                <constraint firstAttribute="height" constant="73" id="S2M-Gi-T0W"/>
                                                 <constraint firstItem="6Uf-mb-gPc" firstAttribute="leading" secondItem="eXk-Ms-Jt0" secondAttribute="leading" constant="16" id="cCf-CQ-Nk5"/>
                                                 <constraint firstItem="T6G-7z-OnW" firstAttribute="top" secondItem="eXk-Ms-Jt0" secondAttribute="top" constant="14" id="eYK-hx-4wd"/>
                                                 <constraint firstAttribute="trailing" secondItem="5C6-IW-cfc" secondAttribute="trailing" constant="16" id="ed8-rC-a8U"/>
@@ -116,8 +122,14 @@
                                                 <constraint firstAttribute="bottom" secondItem="6Uf-mb-gPc" secondAttribute="bottom" constant="17" id="u7q-t0-uka"/>
                                                 <constraint firstItem="T6G-7z-OnW" firstAttribute="leading" secondItem="eXk-Ms-Jt0" secondAttribute="leading" constant="16" id="vnL-oV-1DG"/>
                                             </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="20"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </view>
                                     </subviews>
+                                    <color key="backgroundColor" systemColor="systemGray4Color"/>
                                     <constraints>
                                         <constraint firstItem="eXk-Ms-Jt0" firstAttribute="top" secondItem="NN7-PL-TeR" secondAttribute="top" constant="8" id="7qE-ih-ZuW"/>
                                         <constraint firstAttribute="bottom" secondItem="eXk-Ms-Jt0" secondAttribute="bottom" constant="8" id="FOl-Z0-fn7"/>
@@ -125,6 +137,11 @@
                                         <constraint firstAttribute="trailing" secondItem="eXk-Ms-Jt0" secondAttribute="trailing" constant="16" id="oUq-lu-rNz"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="DetailButton" destination="5C6-IW-cfc" id="RBB-Va-7Bt"/>
+                                    <outlet property="SubtitleLabel" destination="6Uf-mb-gPc" id="vOc-AH-1oW"/>
+                                    <outlet property="TitleLabel" destination="T6G-7z-OnW" id="XNv-JQ-zjP"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -144,20 +161,11 @@
                     <view key="view" contentMode="scaleToFill" id="wHL-YE-xoz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sGT-aO-rsl" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="sGT-aO-rsl" firstAttribute="leading" secondItem="wHL-YE-xoz" secondAttribute="leading" id="6dW-vu-eKg"/>
-                            <constraint firstAttribute="trailing" secondItem="sGT-aO-rsl" secondAttribute="trailing" id="9SY-g0-slv"/>
-                            <constraint firstItem="sGT-aO-rsl" firstAttribute="top" secondItem="wHL-YE-xoz" secondAttribute="top" id="Ghh-J5-Hvz"/>
-                            <constraint firstAttribute="bottom" secondItem="sGT-aO-rsl" secondAttribute="bottom" id="JHQ-8W-pfH"/>
-                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="wHL-YE-xoz" id="Bxl-mw-WO0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PyL-8O-dxE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -171,6 +179,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
