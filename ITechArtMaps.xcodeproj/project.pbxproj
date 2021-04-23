@@ -14,7 +14,6 @@
 		1DDDF5442632A0700098DBA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DDDF5432632A0700098DBA3 /* Assets.xcassets */; };
 		1DDDF5472632A0700098DBA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DDDF5452632A0700098DBA3 /* LaunchScreen.storyboard */; };
 		1DDDF56B2632B1550098DBA3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDDF56A2632B1550098DBA3 /* Extensions.swift */; };
-		1DDDF56E2632B26D0098DBA3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDDF56D2632B26D0098DBA3 /* MapViewController.swift */; };
 		1DDDF58B2632CD5F0098DBA3 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDDF5892632CD5E0098DBA3 /* TableViewController.swift */; };
 		1DDDF5942632E11D0098DBA3 /* MarkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDDF5932632E11C0098DBA3 /* MarkTableViewCell.swift */; };
 		1DDDF5982633060B0098DBA3 /* MarkerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDDF5972633060B0098DBA3 /* MarkerModel.swift */; };
@@ -31,7 +30,6 @@
 		1DDDF5462632A0700098DBA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1DDDF5482632A0700098DBA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DDDF56A2632B1550098DBA3 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		1DDDF56D2632B26D0098DBA3 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		1DDDF5892632CD5E0098DBA3 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		1DDDF5932632E11C0098DBA3 /* MarkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkTableViewCell.swift; sourceTree = "<group>"; };
 		1DDDF5972633060B0098DBA3 /* MarkerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerModel.swift; sourceTree = "<group>"; };
@@ -91,7 +89,6 @@
 			isa = PBXGroup;
 			children = (
 				1DDDF53E2632A06C0098DBA3 /* ViewController.swift */,
-				1DDDF56D2632B26D0098DBA3 /* MapViewController.swift */,
 				1DDDF5892632CD5E0098DBA3 /* TableViewController.swift */,
 			);
 			path = "View controller";
@@ -272,7 +269,6 @@
 			files = (
 				1DDDF56B2632B1550098DBA3 /* Extensions.swift in Sources */,
 				1DDDF58B2632CD5F0098DBA3 /* TableViewController.swift in Sources */,
-				1DDDF56E2632B26D0098DBA3 /* MapViewController.swift in Sources */,
 				1DDDF5942632E11D0098DBA3 /* MarkTableViewCell.swift in Sources */,
 				1DDDF53F2632A06C0098DBA3 /* ViewController.swift in Sources */,
 				1DDDF53B2632A06C0098DBA3 /* AppDelegate.swift in Sources */,

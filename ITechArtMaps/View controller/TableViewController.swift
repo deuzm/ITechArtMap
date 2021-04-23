@@ -10,26 +10,32 @@ import PanModal
 
 class TableViewController: UITableViewController {
     
-    var dataSource: [MarkerModel] = []
+    var dataSource: [MarkerModel]?
+    var sender: UIViewController?
     var isShortFormEnabled = true
+
+    override func viewWillAppear(_ animated: Bool) {
+        if let s = sender as? ViewController {
+            self.dataSource = s.markerArray
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         panModalSetNeedsLayoutUpdate()
-            panModalTransition(to: .shortForm)
+        panModalTransition(to: .shortForm)
         // Do any additional setup after loading the view.
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MarkTableViewCell", for: indexPath) as! MarkTableViewCell
-        
-        cell.TitleLabel.text = dataSource[indexPath.row].name
-        cell.SubtitleLabel.text = dataSource[indexPath.row].street
+        cell.TitleLabel.text = dataSource?[indexPath.row].name ?? "None"
+        cell.SubtitleLabel.text = dataSource?[indexPath.row].street ?? "none"
         return cell
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSource.count
+        return dataSource?.count ?? 0
         }
 }
 

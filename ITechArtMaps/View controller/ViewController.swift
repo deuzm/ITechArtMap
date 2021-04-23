@@ -15,26 +15,21 @@ class ViewController: UIViewController {
     
     var markerArray: [MarkerModel] = []
     
-    @IBOutlet weak var mapView: GMSMapView!
     var settingMarker = false
-//    @IBAction func tapped(_ sender: Any) {
-////        print("Shit")
-////        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-////        let vc2 = storyboard.instantiateViewController(withIdentifier: "Table") as! TableViewController
-////        // Present View "Modally
-////        self.presentPanModal(vc2)
-//    }
     
+//    @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var AddButton: UIButton!
     @IBOutlet weak var transitionButton: UIButton!
+    var myMapView: GMSMapView?
+
     
     @IBAction func transitionToTableView(_ sender: Any) {
-        print("Shit")
          let storyboard = UIStoryboard(name: "Main", bundle: nil)
          let vc2 = storyboard.instantiateViewController(withIdentifier: "Table") as! TableViewController
          // Present View "Modally
+        vc2.sender = self
         vc2.dataSource = markerArray
-         self.presentPanModal(vc2)
+        self.presentPanModal(vc2)
     }
     
     @IBAction func buttonTapped(_ sender: UIButton) {
@@ -45,35 +40,20 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let camera = GMSCameraPosition.camera(
+          withLatitude: 53.9118449,
+          longitude: 27.5927425,
+          zoom: 16
+        )
+        myMapView = GMSMapView.map(withFrame: self.view.bounds, camera: camera)
+        self.view.addSubview(myMapView!)
+        myMapView!.delegate = self
+        
         self.view.bringSubviewToFront(self.AddButton)
         self.view.bringSubviewToFront(self.transitionButton)
-        let camera = GMSCameraPosition.camera(withLatitude: 53.9118449, longitude: 27.5927425, zoom: 16)
-         mapView = GMSMapView(frame: self.view.frame, camera: camera)
-//        self.view.addSubview(mapView)
-        // Creates a marker in the center of the map.
-        
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
-        marker.title = "Sydney"
-        marker.snippet = "Australia"
-        marker.map = mapView
-        
-//        self.mapView.delegate = self
-        // Do any additional setup after loading the view.
-        // Create a GMSCameraPosition that tells the map to display the
-        // coordinate -33.86,151.20 at zoom level 6.
-        
-        
     }
     
-    
-}
-extension ViewController {
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let sender = sender as? TableViewController {
-            sender.dataSource = markerArray
-        }
-    }
 }
 extension ViewController: GMSMapViewDelegate {
     
@@ -106,17 +86,17 @@ extension ViewController: GMSMapViewDelegate {
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
                 let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
                 marker.title = (textField?.text) ?? ""
+                self.markerArray.append(MarkerModel(name: marker.title ?? "", street: marker.snippet ?? ""))
             }))
 
             self.present(alert, animated: true, completion: nil)
             
             marker.position = coordinate
             marker.map = mapView
-            markerArray.append(MarkerModel(name: marker.title ?? "", street: marker.snippet ?? ""))
             settingMarker = false
         }
     }
-    
+
     func mapView(_ mapView: GMSMapView, didLongPressAt coordinate: CLLocationCoordinate2D) {
          // Custom logic here
          let marker = GMSMarker()
