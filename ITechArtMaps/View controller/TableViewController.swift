@@ -24,6 +24,7 @@ class TableViewController: UITableViewController {
         super.viewDidLoad()
         panModalSetNeedsLayoutUpdate()
         panModalTransition(to: .shortForm)
+        tableView.backgroundColor = UIColor.ITechArtColors.WhiteBackground
         // Do any additional setup after loading the view.
     }
     
@@ -31,6 +32,9 @@ class TableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MarkTableViewCell", for: indexPath) as! MarkTableViewCell
         cell.TitleLabel.text = dataSource?[indexPath.row].name ?? "None"
         cell.SubtitleLabel.text = dataSource?[indexPath.row].street ?? "none"
+        cell.contentView.backgroundColor = UIColor.ITechArtColors.WhiteBackground
+        cell.SubtitleLabel.textColor = UIColor.ITechArtColors.TextGrey
+        cell.TitleLabel.textColor = UIColor.ITechArtColors.Black
         return cell
     }
     

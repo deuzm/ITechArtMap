@@ -50,6 +50,7 @@ class ViewController: UIViewController {
         self.view.addSubview(myMapView!)
         myMapView!.delegate = self
         
+        AddButton.backgroundColor = UIColor.ITechArtColors.Blue
         self.view.bringSubviewToFront(self.AddButton)
         self.view.bringSubviewToFront(self.transitionButton)
     }

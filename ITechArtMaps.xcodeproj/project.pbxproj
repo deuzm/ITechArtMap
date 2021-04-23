@@ -17,6 +17,8 @@
 		1DDDF58B2632CD5F0098DBA3 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDDF5892632CD5E0098DBA3 /* TableViewController.swift */; };
 		1DDDF5942632E11D0098DBA3 /* MarkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDDF5932632E11C0098DBA3 /* MarkTableViewCell.swift */; };
 		1DDDF5982633060B0098DBA3 /* MarkerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDDF5972633060B0098DBA3 /* MarkerModel.swift */; };
+		1DDDF5A1263318980098DBA3 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDDF5A0263318980098DBA3 /* Colors.swift */; };
+		1DDDF5A426331AD40098DBA3 /* ButtonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDDF5A326331AD40098DBA3 /* ButtonClass.swift */; };
 		9A15D7DA4A032B02BE03C324 /* Pods_ITechArtMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D16206D8023D647637F32700 /* Pods_ITechArtMaps.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +35,8 @@
 		1DDDF5892632CD5E0098DBA3 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		1DDDF5932632E11C0098DBA3 /* MarkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkTableViewCell.swift; sourceTree = "<group>"; };
 		1DDDF5972633060B0098DBA3 /* MarkerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerModel.swift; sourceTree = "<group>"; };
+		1DDDF5A0263318980098DBA3 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		1DDDF5A326331AD40098DBA3 /* ButtonClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonClass.swift; sourceTree = "<group>"; };
 		D16206D8023D647637F32700 /* Pods_ITechArtMaps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ITechArtMaps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6BD2C159DA30C9EABE73502 /* Pods-ITechArtMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ITechArtMaps.debug.xcconfig"; path = "Target Support Files/Pods-ITechArtMaps/Pods-ITechArtMaps.debug.xcconfig"; sourceTree = "<group>"; };
 		FE96C64653D0F77606031196 /* Pods-ITechArtMaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ITechArtMaps.release.xcconfig"; path = "Target Support Files/Pods-ITechArtMaps/Pods-ITechArtMaps.release.xcconfig"; sourceTree = "<group>"; };
@@ -97,6 +101,7 @@
 		1DDDF5612632AFFB0098DBA3 /* VIew */ = {
 			isa = PBXGroup;
 			children = (
+				1DDDF5A326331AD40098DBA3 /* ButtonClass.swift */,
 				1DDDF5932632E11C0098DBA3 /* MarkTableViewCell.swift */,
 			);
 			path = VIew;
@@ -106,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				1DDDF56A2632B1550098DBA3 /* Extensions.swift */,
+				1DDDF5A0263318980098DBA3 /* Colors.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -268,6 +274,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DDDF56B2632B1550098DBA3 /* Extensions.swift in Sources */,
+				1DDDF5A1263318980098DBA3 /* Colors.swift in Sources */,
+				1DDDF5A426331AD40098DBA3 /* ButtonClass.swift in Sources */,
 				1DDDF58B2632CD5F0098DBA3 /* TableViewController.swift in Sources */,
 				1DDDF5942632E11D0098DBA3 /* MarkTableViewCell.swift in Sources */,
 				1DDDF53F2632A06C0098DBA3 /* ViewController.swift in Sources */,
