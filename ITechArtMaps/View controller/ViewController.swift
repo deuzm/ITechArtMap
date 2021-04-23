@@ -13,6 +13,8 @@ import GooglePlaces
 
 class ViewController: UIViewController {
     
+    var markerArray: [MarkerModel] = []
+    
     @IBOutlet weak var mapView: GMSMapView!
     var settingMarker = false
 //    @IBAction func tapped(_ sender: Any) {
@@ -24,18 +26,27 @@ class ViewController: UIViewController {
 //    }
     
     @IBOutlet weak var AddButton: UIButton!
+    @IBOutlet weak var transitionButton: UIButton!
+    
+    @IBAction func transitionToTableView(_ sender: Any) {
+        print("Shit")
+         let storyboard = UIStoryboard(name: "Main", bundle: nil)
+         let vc2 = storyboard.instantiateViewController(withIdentifier: "Table") as! TableViewController
+         // Present View "Modally
+        vc2.dataSource = markerArray
+         self.presentPanModal(vc2)
+    }
+    
     @IBAction func buttonTapped(_ sender: UIButton) {
         settingMarker = true
-//        print("Shit")
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let vc2 = storyboard.instantiateViewController(withIdentifier: "Table") as! TableViewController
-//        // Present View "Modally
-//        self.presentPanModal(vc2)
+//
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.bringSubviewToFront(self.AddButton)
+        self.view.bringSubviewToFront(self.transitionButton)
         let camera = GMSCameraPosition.camera(withLatitude: 53.9118449, longitude: 27.5927425, zoom: 16)
          mapView = GMSMapView(frame: self.view.frame, camera: camera)
 //        self.view.addSubview(mapView)
@@ -57,7 +68,13 @@ class ViewController: UIViewController {
     
     
 }
-
+extension ViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let sender = sender as? TableViewController {
+            sender.dataSource = markerArray
+        }
+    }
+}
 extension ViewController: GMSMapViewDelegate {
     
     
@@ -65,18 +82,37 @@ extension ViewController: GMSMapViewDelegate {
         if (settingMarker) {
             var address = GMSAddress()
             var addresses = GMSGeocoder()
-            addresses.reverseGeocodeCoordinate(coordinate, completionHandler: {
-                one, two in
-                if let address = one?.firstResult() {
-                    print(address)
-                }
-                print(two.debugDescription)
-            })
             let marker = GMSMarker()
+            addresses.reverseGeocodeCoordinate(coordinate, completionHandler: {
+                responce, error in
+                if let address = responce?.firstResult() {
+                    print(address)
+                    if address.thoroughfare != "" {
+                        marker.snippet = address.thoroughfare
+                    } else {
+                        marker.snippet = address.locality
+                    }
+                } else {
+                    print(error.debugDescription)
+                }
+            })
+            
+            let alert = UIAlertController(title: "Choose the name", message: "Enter text here", preferredStyle: .alert)
+
+            alert.addTextField { (textField) in
+                textField.text = "Name of the marker"
+            }
+
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+                let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
+                marker.title = (textField?.text) ?? ""
+            }))
+
+            self.present(alert, animated: true, completion: nil)
+            
             marker.position = coordinate
-            marker.title = "Set marker"
-            marker.snippet = ""
             marker.map = mapView
+            markerArray.append(MarkerModel(name: marker.title ?? "", street: marker.snippet ?? ""))
             settingMarker = false
         }
     }
