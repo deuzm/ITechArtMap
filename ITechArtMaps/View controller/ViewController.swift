@@ -14,12 +14,20 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var mapView: GMSMapView!
     
-    @IBAction func Tapped(_ sender: Any) {
-        let newViewController = TableViewController(nibName: "NewViewController", bundle: nil)
+//    @IBAction func tapped(_ sender: Any) {
+////        print("Shit")
+////        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+////        let vc2 = storyboard.instantiateViewController(withIdentifier: "Table") as! TableViewController
+////        // Present View "Modally
+////        self.presentPanModal(vc2)
+//    }
+    
+    @IBAction func buttonTapped(_ sender: UIButton) {
+        print("Shit")
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc2 = storyboard.instantiateViewController(withIdentifier: "Table") as! TableViewController
         // Present View "Modally
-        presentPanModal(vc2)
+        self.presentPanModal(vc2)
     }
     
     override func viewDidLoad() {

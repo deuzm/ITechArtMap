@@ -12,7 +12,6 @@ class TableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 }
@@ -20,18 +19,22 @@ class TableViewController: UITableViewController {
 extension TableViewController: PanModalPresentable {
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
-           return .lightContent
-       }
+        return .default
+    }
+    
+    var shortFormHeight: PanModalHeight {
+        return .contentHeight(300)
+    }
 
-       var panScrollable: UIScrollView? {
-           return tableView
-       }
+    var panScrollable: UIScrollView? {
+       return tableView
+    }
 
-       var longFormHeight: PanModalHeight {
-           return .maxHeightWithTopInset(200)
-       }
+    var longFormHeight: PanModalHeight {
+       return .maxHeightWithTopInset(257)
+    }
 
-       var anchorModalToLongForm: Bool {
-           return false
-       }
-}
+    var anchorModalToLongForm: Bool {
+       return false
+    }
+    }
