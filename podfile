@@ -5,4 +5,5 @@ target 'ITechArtMaps' do
   pod 'RealmSwift'
   pod 'GoogleMaps', '4.2.0'
   pod 'GooglePlaces', '4.2.0'
+pod 'PanModal'
 end

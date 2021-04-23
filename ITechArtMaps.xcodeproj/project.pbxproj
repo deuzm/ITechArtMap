@@ -13,17 +13,9 @@
 		1DDDF5422632A06C0098DBA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DDDF5402632A06C0098DBA3 /* Main.storyboard */; };
 		1DDDF5442632A0700098DBA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DDDF5432632A0700098DBA3 /* Assets.xcassets */; };
 		1DDDF5472632A0700098DBA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DDDF5452632A0700098DBA3 /* LaunchScreen.storyboard */; };
-		1DDDF5582632AC020098DBA3 /* SheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDDF5572632AC020098DBA3 /* SheetViewController.swift */; };
-		1DDDF55B2632AC820098DBA3 /* NotchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDDF55A2632AC820098DBA3 /* NotchViewController.swift */; };
-		1DDDF55E2632ACA00098DBA3 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDDF55D2632ACA00098DBA3 /* ContainerViewController.swift */; };
-		1DDDF5632632B0290098DBA3 /* BottomSheetLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDDF5622632B0290098DBA3 /* BottomSheetLauncher.swift */; };
-		1DDDF5672632B03F0098DBA3 /* NotchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDDF5662632B03F0098DBA3 /* NotchView.swift */; };
 		1DDDF56B2632B1550098DBA3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDDF56A2632B1550098DBA3 /* Extensions.swift */; };
 		1DDDF56E2632B26D0098DBA3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDDF56D2632B26D0098DBA3 /* MapViewController.swift */; };
-		1DDDF5712632B95A0098DBA3 /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDDF5702632B95A0098DBA3 /* BottomSheetViewController.swift */; };
-		1DDDF5742632B9A90098DBA3 /* BottomSheetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDDF5732632B9A90098DBA3 /* BottomSheetModel.swift */; };
-		1DDDF57B2632BFD90098DBA3 /* BottomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDDF5792632BFD90098DBA3 /* BottomViewController.swift */; };
-		1DDDF57C2632BFD90098DBA3 /* BottomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDDF57A2632BFD90098DBA3 /* BottomViewController.xib */; };
+		1DDDF58B2632CD5F0098DBA3 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDDF5892632CD5E0098DBA3 /* TableViewController.swift */; };
 		9A15D7DA4A032B02BE03C324 /* Pods_ITechArtMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D16206D8023D647637F32700 /* Pods_ITechArtMaps.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,17 +28,9 @@
 		1DDDF5432632A0700098DBA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DDDF5462632A0700098DBA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1DDDF5482632A0700098DBA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1DDDF5572632AC020098DBA3 /* SheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewController.swift; sourceTree = "<group>"; };
-		1DDDF55A2632AC820098DBA3 /* NotchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotchViewController.swift; sourceTree = "<group>"; };
-		1DDDF55D2632ACA00098DBA3 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
-		1DDDF5622632B0290098DBA3 /* BottomSheetLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetLauncher.swift; sourceTree = "<group>"; };
-		1DDDF5662632B03F0098DBA3 /* NotchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotchView.swift; sourceTree = "<group>"; };
 		1DDDF56A2632B1550098DBA3 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		1DDDF56D2632B26D0098DBA3 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		1DDDF5702632B95A0098DBA3 /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
-		1DDDF5732632B9A90098DBA3 /* BottomSheetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetModel.swift; sourceTree = "<group>"; };
-		1DDDF5792632BFD90098DBA3 /* BottomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomViewController.swift; sourceTree = "<group>"; };
-		1DDDF57A2632BFD90098DBA3 /* BottomViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomViewController.xib; sourceTree = "<group>"; };
+		1DDDF5892632CD5E0098DBA3 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		D16206D8023D647637F32700 /* Pods_ITechArtMaps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ITechArtMaps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6BD2C159DA30C9EABE73502 /* Pods-ITechArtMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ITechArtMaps.debug.xcconfig"; path = "Target Support Files/Pods-ITechArtMaps/Pods-ITechArtMaps.debug.xcconfig"; sourceTree = "<group>"; };
 		FE96C64653D0F77606031196 /* Pods-ITechArtMaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ITechArtMaps.release.xcconfig"; path = "Target Support Files/Pods-ITechArtMaps/Pods-ITechArtMaps.release.xcconfig"; sourceTree = "<group>"; };
@@ -102,13 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				1DDDF53E2632A06C0098DBA3 /* ViewController.swift */,
-				1DDDF5572632AC020098DBA3 /* SheetViewController.swift */,
-				1DDDF55A2632AC820098DBA3 /* NotchViewController.swift */,
-				1DDDF55D2632ACA00098DBA3 /* ContainerViewController.swift */,
 				1DDDF56D2632B26D0098DBA3 /* MapViewController.swift */,
-				1DDDF5702632B95A0098DBA3 /* BottomSheetViewController.swift */,
-				1DDDF5792632BFD90098DBA3 /* BottomViewController.swift */,
-				1DDDF57A2632BFD90098DBA3 /* BottomViewController.xib */,
+				1DDDF5892632CD5E0098DBA3 /* TableViewController.swift */,
 			);
 			path = "View controller";
 			sourceTree = "<group>";
@@ -116,9 +95,6 @@
 		1DDDF5612632AFFB0098DBA3 /* VIew */ = {
 			isa = PBXGroup;
 			children = (
-				1DDDF5622632B0290098DBA3 /* BottomSheetLauncher.swift */,
-				1DDDF5662632B03F0098DBA3 /* NotchView.swift */,
-				1DDDF5732632B9A90098DBA3 /* BottomSheetModel.swift */,
 			);
 			path = VIew;
 			sourceTree = "<group>";
@@ -209,7 +185,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DDDF5472632A0700098DBA3 /* LaunchScreen.storyboard in Resources */,
-				1DDDF57C2632BFD90098DBA3 /* BottomViewController.xib in Resources */,
 				1DDDF5442632A0700098DBA3 /* Assets.xcassets in Resources */,
 				1DDDF5422632A06C0098DBA3 /* Main.storyboard in Resources */,
 			);
@@ -281,18 +256,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DDDF57B2632BFD90098DBA3 /* BottomViewController.swift in Sources */,
-				1DDDF5742632B9A90098DBA3 /* BottomSheetModel.swift in Sources */,
-				1DDDF5632632B0290098DBA3 /* BottomSheetLauncher.swift in Sources */,
-				1DDDF5712632B95A0098DBA3 /* BottomSheetViewController.swift in Sources */,
 				1DDDF56B2632B1550098DBA3 /* Extensions.swift in Sources */,
-				1DDDF5672632B03F0098DBA3 /* NotchView.swift in Sources */,
+				1DDDF58B2632CD5F0098DBA3 /* TableViewController.swift in Sources */,
 				1DDDF56E2632B26D0098DBA3 /* MapViewController.swift in Sources */,
-				1DDDF5582632AC020098DBA3 /* SheetViewController.swift in Sources */,
 				1DDDF53F2632A06C0098DBA3 /* ViewController.swift in Sources */,
-				1DDDF55B2632AC820098DBA3 /* NotchViewController.swift in Sources */,
 				1DDDF53B2632A06C0098DBA3 /* AppDelegate.swift in Sources */,
-				1DDDF55E2632ACA00098DBA3 /* ContainerViewController.swift in Sources */,
 				1DDDF53D2632A06C0098DBA3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
